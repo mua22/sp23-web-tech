@@ -1,0 +1,15 @@
+h1{
+    border-left: 3px solid blue;
+    border-radius: 5px;
+}
+
+td,th{
+    /* border: 1px solid black */
+}
+table{
+    width: 100%;
+}
+
+tr:nth-child(even){
+    background-color: blanchedalmond;
+}
