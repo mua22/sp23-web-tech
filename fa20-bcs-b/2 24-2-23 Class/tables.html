@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        h1{
+            color: red;
+        }
+        th,td{
+            /* border: 1px solid black; */
+        }
+        table{
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+    <h1 style="background-color: lightgray;">Tables Example</h1>
+    <ul>
+        <li>Usman</li>
+        <li>NOman</li>
+    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 50%;" colspan="2">Restaurant / Location</th>
+                <!-- <th>Location</th> -->
+                <th>Menu</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        
+            <tbody>
+                <tr>
+                    <td rowspan="2">Monal1</td>
+                    <td>Gulberg1</td>
+                    <td>hitea1</td>
+                    <td>18001</td>
+                </tr><tr>
+                    <td>Monal2</td>
+                    <td>Gulberg2</td>
+                    <td>hitea2</td>
+                    
+                </tr><tr>
+                    <td>Monal</td>
+                    <td>Gulberg</td>
+                    <td>hitea</td>
+                    <td>1800</td>
+                    <td>per person</td>
+                </tr><tr>
+                    <td>Monal</td>
+                    <td>Gulberg</td>
+                    <td>hitea</td>
+                    <td>1800</td>
+                </tr>
+            </tbody>
+        
+    </table>
+</body>
+</html>
