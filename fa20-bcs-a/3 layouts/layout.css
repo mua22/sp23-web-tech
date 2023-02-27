@@ -1,0 +1,26 @@
+div{
+    border: 1px dashed blue;
+    padding: 5px;
+    margin: 3px;
+}
+#content{
+    overflow: hidden;
+}
+.left{
+    float:left;
+    width:20%
+}
+
+.right{
+    background-color: lightgray;
+    float: right;
+    width:20%
+}
+
+#footer{
+    clear:right
+}
+
+#menu li{
+    display: inline;
+}
