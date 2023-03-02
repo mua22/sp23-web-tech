@@ -1,0 +1,47 @@
+div{
+    /* border: 1px solid black; */
+    padding: 5px;
+    margin: 5px
+}
+
+ul#menu > li{
+    display: inline;
+    background-color: lightblue;
+}
+#content{
+    overflow: hidden;
+}
+.right{
+    float:right;
+    width: 15%;
+    background-color: lightgray;
+}.left{
+    float:left;
+    width: 15%;
+    background-color: lightgray;
+}
+
+#footer{
+    clear:both;
+}
+
+.dropdown-menu{
+    display: none;
+}
+.dropdown-menu li{
+    list-style-type: none;
+
+}
+.has-dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: aqua;
+}
+
+#menu .has-dropdown:hover .dropdown-menu{
+    display: block;
+}
