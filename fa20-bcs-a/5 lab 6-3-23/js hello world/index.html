@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            .red{
+                background-color: red;
+            }
+            .green{
+                position: relative;
+                background-color: green;
+                animation-name: moveit;
+                animation-duration: .5s;
+            }
+            @keyframes moveit {
+                0%{
+                    right:0px;
+                }
+                50%{
+                    right:5px;
+                }
+                100%{
+                    right:-5px;
+                }
+            }
+        </style>
+
+        <script>
+            console.log("From Script Tag")
+        </script>
+        <script src="myscript.js"></script>
+    </head>
+    
+    <body>
+        <h1>JS Start</h1>
+        <button onclick="btnClickHandler();">Click Me</button>
+        <div id="result">You Did not Click the Btn Yet</div>
+         <div id="test" class="red">
+             This is a test string
+         </div>
+
+         <input id="name" type="text" />
+    </body>
+</html>
