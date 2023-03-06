@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blue;
+            color:white
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col{
+            flex:23%;
+            max-width: 23%;
+        }
+        .col{
+            border: 1px solid black;
+            padding:2px
+        }
+@media screen and (max-width:600px){
+    .col{
+        flex:100%;
+        max-width: 100%;
+    }
+}@media screen and (max-width:800px){
+    .col{
+        flex:48%;
+        max-width: 48%;
+    }
+}
+@media screen and (max-width:1000px){
+    .col{
+        flex:32%;
+        max-width: 32%;
+    }
+}
+        @media screen and (min-width:400px) {
+            body{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non molestiae inventore cum dolorem odio ipsum eius deserunt! Dolor, quaerat. Ratione cum fuga aperiam necessitatibus nemo impedit ex nihil blanditiis ipsum.</div>
+        <div class="col">Voluptas eos eveniet vero qui quibusdam modi possimus maxime voluptatem temporibus voluptates vel accusantium est, aut, ullam placeat esse maiores excepturi officia. Fugit aspernatur doloribus alias atque fugiat facere amet.</div>
+        <div class="col">Quia magnam perferendis et expedita debitis laboriosam. Aliquid, veritatis recusandae modi, dignissimos cum eaque vero architecto autem doloribus dolor sint qui odio quisquam sit alias. Nostrum minus nobis error qui?</div>
+        <div class="col">Optio, suscipit quam ad in hic error quasi assumenda amet officia placeat ullam eaque, minus consectetur, adipisci repellendus odio nihil corporis eligendi! Totam culpa repellendus autem nulla accusamus hic fuga?</div>
+    </div>
+</body>
+</html>
