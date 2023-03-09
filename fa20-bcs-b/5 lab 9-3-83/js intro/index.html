@@ -1,0 +1,43 @@
+<html>
+    <head>
+
+        <script>
+            console.log("From Script Tag");
+        </script>
+        <script src="testscript.js"></script>
+        <style>
+            .success{
+                border: 5px solid green;
+            }
+            .error{
+             border: 5px solid red;
+             animation-name: shakeIt;
+             animation-duration: .1s;
+            }
+
+            .input{
+                position: relative;
+                padding: 3px
+            }
+
+            @keyframes shakeIt {
+                0%{right:10px;}
+                50%{right: -10px;}
+                100%{right:0px;}
+            }
+        </style>
+    </head>
+    <body>
+        <h3>JS Intro</h3>
+        <button id="testBtn" onclick="handleTestBtnClick()">Click Me</button>
+        <div id="result">
+            Button is not clicked yet
+        </div>
+            <br />
+            <br />
+            <br />
+        <input type="text" id="name" class="input"/>
+        <br />
+        <button id="nameBtn" onclick="checkNameHandler()">Check Name</button>
+    </body>
+</html>
