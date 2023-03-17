@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#good").on("click","li",function(){
+                $(this).appendTo("#naughty")
+            });
+            $("#naughty").on("click","li",function(){
+                $(this).appendTo("#good")
+            });
+        })
+    </script>
+</head>
+<body>
+    <h2>Good Students</h2>
+    <ul id="good">
+        <li>Usman</li>
+        <li>Noman</li>
+    </ul>
+    <h2>Naughty Students</h2>
+    <ul id="naughty">
+        <li>Hammad</li>
+        <li>Junaid</li>
+    </ul>
+    <p>hint: $(this) is used to select the tag on which current event is triggered</p>
+</body>
+</html>
