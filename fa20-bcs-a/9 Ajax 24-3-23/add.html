@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="ajaxdemo.js">
+        
+    </script>
+</head>
+<body class="container">
+    <form id="addForm" action="https://usman-fake-api.herokuapp.com/api/recipes" method="post">
+        <div class="mb-3 mt-5">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" id="title" name="title" class="form-control" value="Black Forest Cake"/>
+        </div>
+        <div class="mb-3">
+            <label for="body" class="form-label">Body</label>
+            <textarea id="body" class="form-control" name="body">This is great</textarea>
+        </div>
+        <button class="btn btn-info" type="submit">Add</button>
+    </form>
+</body>
+</html>
