@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            // this code will be executed when DOM is ready
+                $("#loadDataBtn").on("click",fetchData);
+                fetchData();
+        })
+
+        function fetchData(){
+            $("#recipes").html("Loading ...");
+            console.log("API Call to fetch Data Started");
+            $.ajax({
+                url:"https://usman-fake-api.herokuapp.com/api/recipes",
+                success: handleAjaxResponse
+            })
+            console.log("API Call to fetch Data Ended");
+        }
+
+        function handleAjaxResponse (response){
+            console.log("Request Completed");
+            // $("#recipes").html("Request Completed");
+            $("#recipes").html("");
+            console.log(response);
+            for(var i=0;i<response.length;i++){
+                var rec = response[i];
+                $("#recipes").append("<div><h1>"+rec.title+"</h1><p>"+rec.body+"</p></div>")
+            }
+        }
+    </script>
+</head>
+<body class="container">
+    <h1>This Page will show Recipes from an api call</h1>
+    <!-- <button class="btn btn-info" id="loadDataBtn">Load Data</button> -->
+    <div id="recipes">Nothing to show here</div>
+
+</body>
+</html>
