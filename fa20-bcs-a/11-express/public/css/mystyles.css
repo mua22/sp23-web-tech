@@ -2,3 +2,7 @@ h1{
     color: red;
 }
 /* This is served from express */
+
+#menu li{
+    display: inline;
+}
