@@ -1,4 +1,4 @@
-#Instructions
+# Instructions
 
 Run following command to install nodemon globally 
 
@@ -7,6 +7,7 @@ Run following command to install nodemon globally
 to run this app run following command 
 
 >npm i
+
 >node server
 
 if you want to run with nodemon then run 
