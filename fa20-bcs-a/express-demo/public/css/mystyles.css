@@ -1,0 +1,6 @@
+/* This will be served from server */
+
+h1{
+    background-color:green;
+    color: white;
+}
