@@ -14,11 +14,7 @@ app.use(express.static("public"));
 app.get("/contact-us", (req, res) => {
   res.render("contact-us");
 });
-
-app.get("/", (req, res) => {
-  console.log("Req Received for homepage");
-  res.render("homepage", { pageTitle: "FA20Travels" });
-});
+app.use("/", require("./routes/site/homepage-router"));
 
 let port = 4000;
 app.listen(port, () => {
@@ -26,7 +22,13 @@ app.listen(port, () => {
   console.log(
     "Expres Server Started at port " +
       port +
-      ". access your app at localhost:" +
+      ". access your app at http://localhost:" +
       port
   );
 });
+
+const mongoose = require("mongoose");
+mongoose
+  .connect("mongodb://localhost/fa22a-destinations", { useNewUrlParser: true })
+  .then(() => console.log("Connected to Mongo...."))
+  .catch((error) => console.log(error.message));

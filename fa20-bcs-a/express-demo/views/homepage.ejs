@@ -1,4 +1,12 @@
 <h1><%= pageTitle %></h1>
+<h2>Top Destinations</h2>
+
+<% topDestinations.forEach(dest => { %>
+ <div class="destination">
+     <h3><%= dest.name %></h3>
+     <p><%= dest.speciality %></p>
+ </div>
+<% }) %>
 
 <%-contentFor('footer') %>
 <p>This will go in footer</p>
