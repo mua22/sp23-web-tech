@@ -1,13 +1,18 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Book = require("./models/book");
+var expressLayouts = require("express-ejs-layouts");
 let app = express();
+app.use(expressLayouts);
 app.use(express.json());
 app.set("view engine", "ejs");
 
 app.use("/api/books", require("./routes/api/books/booksRouter"));
 app.use("/api/toys", require("./routes/api/toys/toysRouter"));
-
+app.use("/", require("./routes/books"));
+app.get("/login", (req, res) => {
+  res.render("auth/login");
+});
 app.get("/contact-us", (req, res) => {
   //   res.send("Hello");
   res.render("contact-us");

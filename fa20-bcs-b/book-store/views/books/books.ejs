@@ -1,0 +1,12 @@
+<h1>Books</h1>
+<% console.log(books) %>
+
+<% for( let index = 0; index < books.length; index++ ) { %>
+    <div class="product">
+        <h2 class="product-title">
+            <%= books[index].title %>
+        </h2>
+        <a href="/books/<%= books[index]._id %>">Details</a>
+    </div>
+  
+<% } %>
