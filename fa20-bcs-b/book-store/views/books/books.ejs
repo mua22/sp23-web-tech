@@ -1,12 +1,16 @@
 <h1>Books</h1>
 <% console.log(books) %>
-
+<a href="/books/add" class="btn btn-secondary">Add New Book</a>
 <% for( let index = 0; index < books.length; index++ ) { %>
     <div class="product">
         <h2 class="product-title">
             <%= books[index].title %>
+            <span class="price" style="float:right">PKR <%= books[index].price %></span>
         </h2>
-        <a href="/books/<%= books[index]._id %>">Details</a>
+        <a class="btn btn-info" href="/books/cart/<%= books[index]._id %>">Add To Cart</a>
+        <a class="btn btn-primary" href="/books/<%= books[index]._id %>">Details</a>
+        <a class="btn btn-secondary" href="/books/edit/<%= books[index]._id %>">Edit</a>
+        <a class="btn btn-danger" href="/books/delete/<%= books[index]._id %>">Delete</a>
     </div>
   
 <% } %>

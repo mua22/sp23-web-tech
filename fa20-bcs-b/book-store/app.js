@@ -5,6 +5,7 @@ var expressLayouts = require("express-ejs-layouts");
 let app = express();
 app.use(expressLayouts);
 app.use(express.json());
+app.use(express.urlencoded());
 app.set("view engine", "ejs");
 
 app.use("/api/books", require("./routes/api/books/booksRouter"));

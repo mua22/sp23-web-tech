@@ -1,0 +1,9 @@
+<h3>    <%=pageTitle  %> </h3>
+
+<% for( let index = 0; index < deals.length; index++ ) { %>
+<div class="product">
+    <h2 class="product-title"><%= deals[index].title %> <span class="product-price" style="float: right;">PKR <%= deals[index].price %></span></h2>
+    <button class="btn btn-secondary">View Details</button>
+    <button class="btn btn-secondary">Add To Cart</button>
+</div>
+<% } %>

@@ -1,0 +1,26 @@
+<h1>Edit Form</h1>
+<form action="" method="post">
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" value="<%= book.title %>"/>
+        </div>
+        <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" name="author" value="<%= book.author %>"/>
+        </div><div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" name="price" value="<%= book.price %>"/>
+        </div><div class="mb-3">
+            <label for="description" class="form-label">Details</label>
+            <input type="text" class="form-control" id="description" name="description" value="<%= book.description %>"/>
+        </div>
+        <div class="mb-s">
+            <input type="submit" class="btn btn-secondary" />
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
+</form>
