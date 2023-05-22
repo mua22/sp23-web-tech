@@ -1,0 +1,26 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for( let index = 0; index < deals.length; index++ ) { %>
+            <tr>
+                <td><%= deals[index].title %></td>
+                <td><%= deals[index].price %></td>
+                <td><a href="/deals/remove-from-cart/<%= deals[index]._id %>" class="btn btn-danger">Remove</a></td>
+                
+            </tr>
+        <% } %>
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Total</th>
+            <th><%= total %></th>
+        </tr>
+    </tfoot>
+</table>
