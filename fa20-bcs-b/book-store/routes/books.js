@@ -22,6 +22,19 @@ router.post("/books/edit/:id", async (req, res) => {
   let book = await BookModel.findByIdAndUpdate(req.params.id, req.body);
   res.redirect("/books");
 });
+router.get("/books/cart/remove/:id", async (req, res) => {
+  let cart = req.cookies.cart ? req.cookies.cart : [];
+  let index = cart.findIndex((c) => c == req.params.id);
+  cart.splice(index, 1);
+  res.cookie("cart", cart);
+  return res.redirect("back");
+});
+router.get("/books/cart/:id", async (req, res) => {
+  let cart = req.cookies.cart ? req.cookies.cart : [];
+  cart.push(req.params.id);
+  res.cookie("cart", cart);
+  return res.redirect("back");
+});
 router.get("/books/:id", async (req, res) => {
   let book = await BookModel.findById(req.params.id);
   res.render("books/books-single", { book });

@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>Item</tr>
+        <tr>Price</tr>
+    </thead>
+    <tbody>
+        <% books.forEach(book => { %>
+          <tr>
+              <td> <a class="btn btn-danger" href="/books/cart/remove/<%=book._id  %>">Remove</a> <%= book.title %></td>
+              <td><%= book.price %></td>
+          </tr>
+        <% }) %>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td><%= total %></td>
+        </tr>
+    </tfoot>
+</table>
