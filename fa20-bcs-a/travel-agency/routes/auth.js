@@ -49,8 +49,9 @@ router.get("/profile", sessionAuth, async (req, res) => {
   //this route should be protected
   res.render("auth/profile");
 });
-router.get("/admin-profile", sessionAuth, admin, async (req, res) => {
+router.get("/admin-profile", sessionAuth, admin, async (req, res, next) => {
   //this route should be protected
   res.render("auth/admin-profile");
+  // next();
 });
 module.exports = router;

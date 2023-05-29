@@ -3,6 +3,11 @@ let app = express();
 var expressLayouts = require("express-ejs-layouts");
 var cookieParser = require("cookie-parser");
 var session = require("express-session");
+app.use((req, res, next) => {
+  // res.send("site is down for maintenance");
+  console.log(req.url);
+  next();
+});
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(expressLayouts);
@@ -32,6 +37,9 @@ app.get("/cookie-test", (req, res) => {
 });
 app.get("/", (req, res) => {
   res.render("homepage");
+});
+app.use((req, res, next) => {
+  res.status(404).send("Not Found");
 });
 
 app.listen(4000, () => {
