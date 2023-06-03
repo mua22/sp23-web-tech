@@ -27,17 +27,31 @@
               <li class="nav-item">
                 <a class="nav-link" href="/cart">Checkout</a>
               </li>
+              <% if (user) { %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout">Logout</a>
+                </li>
+              <% } else { %>
+               
+              
               <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
+              </li><li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
+              <% } %>
+              
+              
             </ul>
           </div>
         </div>
       </nav>
       <div class="container">
+        <% if (flash) { %>
+         <div class="alert alert-<%-flash.type%>">
+          <%-flash.message %>
+        </div>
+        <% } %>
         <%-body  %>
       </div>
     
