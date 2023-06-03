@@ -20,7 +20,7 @@ router.put("/:id", async (req, res) => {
   res.send(book);
 });
 
-router.get("/", async (req, res) => {
+router.get("/", require("../../../middlewares/apiauth"), async (req, res) => {
   let books = await Book.find();
   res.send(books);
 });

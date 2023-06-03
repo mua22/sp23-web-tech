@@ -21,6 +21,7 @@ app.use(
 app.use(require("./middlewares/siteSettings"));
 app.use("/api/books", require("./routes/api/books/booksRouter"));
 app.use("/api/toys", require("./routes/api/toys/toysRouter"));
+app.use("/api/auth", require("./routes/api/auth/index"));
 app.use("/", require("./routes/books"));
 app.use("/", require("./routes/auth"));
 app.get("/contact-us", (req, res) => {
